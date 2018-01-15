@@ -1,0 +1,150 @@
+<!DOCTYPE html> 
+<html> 
+<head manifest="demo_html.appcache">
+<head lang="en">
+<link rel="stylesheet" type="text/css" href="prapavija.css">
+<meta charset="utf-8">
+<style> 
+.gallery {
+    margin: 100px 15px 100px 15px;
+    border: 1px solid #ccc;
+    float:left;
+    width: 350px;
+}
+
+.gallery:hover {
+    border: 50px #767;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+.desc {
+    padding: 15px;
+    text-align: center;
+}
+</style>
+<script> 
+function validateForm() {
+	var fjalkalimi1 = document.forms["forma1"]["fjalekalimi"].value; 
+		if (fjalkalimi1 == null || fjalkalimi1 == "") 
+		{ alert("Duhet te shtypni fjalekalimin tuaj!")
+		return false
+		}
+}
+function ValidateEmail(mail)   
+{  
+ if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(form2.mail.value))  
+  {  
+    return (true)  
+  }  
+    alert("You have entered an invalid email address!")  
+    return (false)  
+}  
+</script> 
+</head> 
+<body> 
+<header>
+<div class="container">
+<img id="foto1" src="htmlpro/upp.jpg" alt="  " width="100%">
+</div>
+<br>
+<div id="Menu">
+
+<ul class="ballina">
+
+<li><a href="Bibliotekadixhitale.html" id="ballina" >Ballina</a></li>
+
+<li><a href="lajme.html" target="_blank">Lajme</a></li>
+
+<li style="width:15%;"><a href="http://fjalori.shkenca.org/">Fjalor Shqip-Shqip</a></li>
+
+<li><a href="blejliber.html">Blej Liber</a></li>
+
+<li><a href="lexoliber.html">Lexo Liber</a></li>
+
+<li><a href="argetim.html">Argetim</a></li>
+
+<li><a href="rrethnesh.html">Rreth Nesh</a></li>
+
+</ul>
+</div> 
+</header>
+<div style="margin-left:60px; margin-right:60px;">
+<div class="gallery" style="transform: rotate(-20deg);">
+  <a target="_blank" href="kuizshqip.html"> 
+      <img src="htmlpro/quiz.jpg" 
+		alt="Kuiz nga letërsia shqiptare." 
+		 width="600" height="400" > 
+                  <div class="desc">Kuiz nga letërsia shqiptare</div>
+  </a>      
+</div>
+<div class="gallery">
+  <a target="_blank" href="kuizihuaj.html"> 
+      <img src="htmlpro/quiz3.jpg" 
+		alt="Kuiz nga letërsia botërore." 
+		 width="600" height="400" > 
+                  <div class="desc">Kuiz nga letërsia botërore</div>
+  </a>      
+</div>
+<div class="gallery" style="transform: rotate(20deg);">
+  <a target="_blank" href="drag&drop.html"> 
+      <img src="htmlpro/quickquiz.png" 
+		alt="Sa i njihni figurat autoret shqiptare?" 
+		 width="600" height="400" > 
+                  <div class="desc">Sa i njihni figurat e autorëve shqiptarë</div>
+  </a>      
+</div>
+</div>
+<footer>
+    <div id="footer">
+    <div id="orari">
+    <h3> Orari i punes ne biblotekat e Prishtines:</h3>
+	<p><b>Biblioteka "Hivzi Sylejmani":</b></p>
+    <p>E Hënë - Diel: 8:00 - 20:00</p>
+    <p><b>Bibloteka Kombetare "Pjeter Bogdani":</b></p>
+    <p>E Hënë - Premte : 7:00 - 20:00</p>
+    <p>E Shtunë: 7:00 - 14:00</p>
+    <p><b>Bibloteka e Fakulteteve</b></p>
+    <p>E Hënë - Premte : 7:00 - 21:00</p>
+    <p>E Shtunë-E Diele: 8:00 - 18:00</p>
+    </div> 
+<div id="form1">
+<form name="forma1" onsubmit=" return validateForm()" >
+  <div class="EmriMbiemri">
+    <h3>Kyçuni: </h3>
+    <label><b>Emri &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  </b></label>
+    <input type="text" placeholder="Shkruani emrin" name="emri" required>
+	</br><br>
+    <label><b>Fjalekalimi</b></label>
+    <input type="password" placeholder="Shkruani fjalekalimin" name="fjalekalimi" >
+        <br>
+    <button type="submit">Kyçu</button>
+    <input type="checkbox" checked="checked"> Me ruaj
+  </div>
+  <br>
+    <span class="psw">Keni harruar <a href="#">fjalekalimin?</a></span>
+  </div>
+  <div id="form2" onsubmit="return validateEmail() " >
+		<h3> Kontaktoni në</h3>
+		<form action="mailto:someone@example.com" method="post" enctype="text/plain">
+		Emri dhe Mbiemri:<br>
+		<input type="text" name="name" ><br>
+		E-mail:<br>
+		<input type="text" name="mail"><br>
+		Comment:<br>
+		<textarea name="Description" rows="4" cols="30"> </textarea>
+		<input type="submit" value="Dërgo">
+		</form>
+	</div>
+  </div> 
+</form>
+    </div>
+</footer>
+
+
+
+</body> 
+</html> 

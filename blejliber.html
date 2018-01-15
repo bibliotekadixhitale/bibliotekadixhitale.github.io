@@ -1,0 +1,258 @@
+<!DOCTYPE html> 
+<html> 
+<head manifest="demo_html.appcache">
+<head lang="en">
+<link rel="stylesheet" type="text/css" href="prapavija.css">
+<meta charset="utf-8">
+<style> 
+p.dotted{outline-style: dotted;}
+#body {
+	margin-left:150px; 
+	margin-right:150px; 
+}
+#libra {
+    margin: 0;
+    padding-left:260px;
+	
+    }
+#libri1 {
+	float:left;
+}
+#libri2{
+	float:left; 
+}
+#libri3 {
+	float:left;
+}
+#libri4 {
+	float:left;
+}
+
+</style> 
+</style>
+<script> 
+function validateForm() {
+	var fjalkalimi1 = document.forms["forma1"]["fjalekalimi"].value; 
+		if (fjalkalimi1 == null || fjalkalimi1 == "") 
+		{ alert("Duhet te shtypni fjalekalimin tuaj!")
+		return false
+		}
+}
+function ValidateEmail(mail)   
+{  
+ if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(form2.mail.value))  
+  {  
+    return (true)  
+  }  
+    alert("You have entered an invalid email address!")  
+    return (false)  
+}  
+</script> 
+</head> 
+<body> 
+<header>
+<div class="container">
+<img id="foto1" src="htmlpro/upp.jpg" alt="  " width="100%">
+</div>
+<br>
+<div id="Menu">
+
+<ul class="ballina">
+
+<li><a href="Bibliotekadixhitale.html" id="ballina" >Ballina</a></li>
+
+<li><a href="lajme.html" target="_blank">Lajme</a></li>
+
+<li style="width:15%;"><a href="http://fjalori.shkenca.org/">Fjalor Shqip-Shqip</a></li>
+
+<li><a href="blejliber.html">Blej Liber</a></li>
+
+<li><a href="lexoliber.html">Lexo Liber</a></li>
+
+<li><a href="argetim.html">Argetim</a></li>
+
+<li><a href="rrethnesh.html">Rreth Nesh</a></li>
+
+</ul>
+</div> 
+</header>
+<div id="body">
+<div id="libri1">
+<div style="float:left;">
+<figure>
+<img src="htmlpro/meshari.jpg" width="175px">
+	<figcaption>Meshari i Gjon Buzukut </figcaption>
+	</figure></div>
+	<div style="float:right;"><pre>
+Libri: Meshari
+Cmimi: 7 euro
+Autori: Gjon Buzuku
+Detaje të librit: Botim i vjeter
+Shtëpia Botuese: UEGEN	
+Fletët: 124</pre>
+
+	<!--kur klikojme mbi butonin "perkthe librin", na hapet nje kuti e verejtjes-->
+<button onclick="FunksioniI()">Perkthe librin!</button>
+<p><button onclick="clickCounter()" type="button" href="lajme.html">Lexo!</button></p>
+<div id="result"></div>
+</br></br>
+</div>
+</div>
+<div id="libri2">
+<div style="float:left;">
+ <figure>
+    <img src="htmlpro/libri2.png" width="175px" height="254px">
+    <figcaption>Alkimisti, Paulo Coelho</figcaption>
+	</figure>
+</div>
+	<div style="float:right;"><pre>
+Libri: Alkimisti
+Cmimi: 11 euro
+Autori: Paulo Coelho
+Detaje të librit: Botim i ri
+Shtëpia Botuese: BUZUKU
+Fletët: 200</pre>
+	</div>
+	<br>
+</div>
+<div id="libri3">
+<div style="float:left; ">
+<figure>
+    <img src="htmlpro/libri3.jpg" width="175px" height="254px">
+    <figcaption>Darka e Gabuar</figcaption>
+	</figure>
+</div>
+<div style="float:right;">
+<pre>
+Libri: Darka e Gabuar
+Cmimi: 8 euro
+Autori: Ismail Kadare
+Detaje të librit: Botim i ri
+Shtëpia Botuese: DUKAGJINI	
+Fletët: 170</pre>
+</div>
+</div>
+<div id="libri4">
+<div style="float:left; ">
+<figure>
+    <img src="htmlpro/libri4.jpg" width="175px" height="254px">
+    <figcaption>Pallati i Endrrave</figcaption>
+	</figure>
+</div>
+<div style="float:left;">
+<pre>
+Libri: Pallati i Endrrave
+Cmimi: 8 euro
+Autori: Ismail Kadare
+Detaje të librit: Botim i ri
+Shtëpia Botuese: UEGEN	
+Fletët: 356</pre>
+</div>
+</div>
+<script>
+function FunksioniI() {
+    alert("Perkthimi i librit nuk eshte i gatshem!");
+} 
+<!--web storage-->
+function clickCounter() {
+    if(typeof(Storage) !== "undefined") {
+        if (localStorage.clickcount) {
+            localStorage.clickcount = Number(localStorage.clickcount)+1;
+        } else {
+            localStorage.clickcount = 0;
+        }
+        document.getElementById("result").innerHTML = "Ju keni lexuar " + localStorage.clickcount + " here.";
+    } else {
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+    }
+}
+
+</script>
+</div>
+</body> 
+</br> </br> </br> </br> </br> </br> </br> </br> </br> </br> 
+
+<div>
+<div class="librat" style="float:left;">
+<figure>
+
+<img src="htmlpro/3lsh.png" alt="Library" usemap="#librat"/>
+<map name="librat">
+  <area shape="rect" coords="1,0,200,300" alt="Libri4" href="libri4.html ">
+  <area shape="rect" coords="200,0,400,600" alt="Libri5" href="libri5.html">
+  <area shape="rect" coords="400,0,600,800" alt="Libri6" href="libri6.html">
+</map>
+<br>
+
+<figcaption><b>LIBRAT ME TE SHITUR ANGLISHT PER VITIN 2017</b></figcaption>
+
+</figure>
+</div>
+
+<div class="map" style="float:right;">
+<figure>
+
+<img src="htmlpro/3la.jpg" alt="Library" usemap="#map" width="600px" height="300px"/>
+<map name="map">
+  <area shape="rect" coords="1,0,200,300" alt="Libri1" href="libri1.html">
+  <area shape="rect" coords="200,0,400,600" alt="Libri2" href="libri2.html">
+  <area shape="rect" coords="400,0,600,800" alt="Libri3" href="libri3.html">
+</map>
+<br>
+
+<figcaption><b>LIBRAT ME TE SHITUR SHQIP PER VITIN 2017</b></figcaption>
+
+</figure>
+</div>
+</div>
+
+<footer>
+    <div id="footer">
+    <div id="orari">
+    <h3> Orari i punes ne biblotekat e Prishtines:</h3>
+	<p><b>Biblioteka "Hivzi Sylejmani":</b></p>
+    <p>E Hënë - Diel: 8:00 - 20:00</p>
+    <p><b>Bibloteka Kombetare "Pjeter Bogdani":</b></p>
+    <p>E Hënë - Premte : 7:00 - 20:00</p>
+    <p>E Shtunë: 7:00 - 14:00</p>
+    <p><b>Bibloteka e Fakulteteve</b></p>
+    <p>E Hënë - Premte : 7:00 - 21:00</p>
+    <p>E Shtunë-E Diele: 8:00 - 18:00</p>
+    </div> 
+<div id="form1">
+<form name="forma1" onsubmit=" return validateForm()" >
+  <div class="EmriMbiemri">
+    <h3>Kyçuni: </h3>
+    <label><b>Emri &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  </b></label>
+    <input type="text" placeholder="Shkruani emrin" name="emri" required>
+	</br><br>
+    <label><b>Fjalekalimi</b></label>
+    <input type="password" placeholder="Shkruani fjalekalimin" name="fjalekalimi" >
+        <br>
+    <button type="submit">Kyçu</button>
+    <input type="checkbox" checked="checked"> Me ruaj
+  </div>
+  <br>
+    <span class="psw">Keni harruar <a href="#">fjalekalimin?</a></span>
+  </div>
+  <div id="form2" onsubmit="return validateEmail() " >
+		<h3> Kontaktoni në</h3>
+		<form action="mailto:someone@example.com" method="post" enctype="text/plain">
+		Emri dhe Mbiemri:<br>
+		<input type="text" name="name" ><br>
+		E-mail:<br>
+		<input type="text" name="mail"><br>
+		Comment:<br>
+		<textarea name="Description" rows="4" cols="30"> </textarea>
+		<input type="submit" value="Dërgo">
+		</form>
+	</div>
+  </div> 
+</form>
+    </div>
+</footer>
+
+
+
+</body> 
+</html> 

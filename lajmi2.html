@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html>
+
+<head lang="en">
+<link rel="stylesheet" type="text/css" href="prapavija.css">
+<style>
+
+	.lajmi1 
+	{
+	margin: auto;
+    width: 60%;
+    padding: 10px;
+	}
+
+</style> 
+</head> 
+<body>
+
+<header>
+
+		<div class="container">
+			<img id="foto1" src="htmlpro/upp.jpg" alt="  " width="100%">
+			<div class="bottom-left"><h1 style="color:#E8E1DF  ">BIBLIOTEKA DIXHITALE</h1></div>
+		</div>
+
+<nav>
+
+<ul>
+
+<ul class="ballina">
+
+<li><a href="Bibliotekadixhitale.html" id="ballina" >Ballina</a></li>
+
+<li><a href="lajme.html" target="_blank">Lajme</a></li>
+
+<li style="width:15%;"><a href="http://fjalori.shkenca.org/">Fjalor Shqip-Shqip</a></li>
+
+<li><a href="blejliber.html">Blej Liber</a></li>
+
+<li><a href="lexoliber.html">Lexo Liber</a></li>
+
+<li><a href="argetim.html">Argetim</a></li>
+
+<li><a href="rrethnesh.html">Rreth Nesh</a></li>
+
+</ul>
+    
+</nav>
+    
+</header>
+
+<h1 style="text-align:center; font-family:arial;" > “Ora e Zooparkut” e Zija Çelës fitues i “Rexhai Surroit” për letërsi </h1>
+	<div class="lajmi1">
+	<p style="text-align:justify; margin-left:100px; margin-right:100px; font-size:16px; font-family:Times New Roman;"> 
+		<img style="position: relative" src="htmlpro\lajmi2.jpg" alt="“Ora e Zooparkut” e Zija Çelës fitues i “Rexhai Surroit” për letërsi">
+	<br><br><br>
+	<b>Romani “Ora e Zooparkut” e Zija Çela ka fituar çmimin “Rexhai Surroi” për letërsi.</b>
+		<br><br>
+		“Ky roman do i rezistojë kohës dhe do të mbetet në arkën e pasurisë tonë kulturore”, ka thënë Kim Mehmeti gjatë ndarjes së çmimeve.
+		<br><br>
+		Çela gjatë pranimit të çmimit ka thënë se ndihet i nderuar për çmimin dhe se ndjen tërheqje të veçantë nga figura e Rexhai Surroit.
+		<br><br>
+		“Meqë u mbushën dhjetë vjet të ceremonisë, mund të them që prania ime kapërcen çmimin tim. Ndjeva një tërheqje të veçantë nga figura e Rexhait, nga ato kalimet nga një moshë në moshën tjetër, ato fjalët që u than”, ka thënë Çela.
+		<br><br>
+		“Më ka gëzuar ky çmim. I tillë është njeriu. Më ka gëzuar për përmbajtjen që ka”, ka shtuar ai.
+		<br><br>
+		Fitues të edicionit të kaluar të “Rexhai Surroi” ishte Ibrahim Kadriu me romanin e tij “Misioni rus”.
+	</p>
+	</div>
+<footer>
+    <div id="footer">
+    <div id="orari">
+    <h3> Orari i punes ne biblotekat e Prishtines:</h3>
+	<p><b>Biblioteka "Hivzi Sylejmani":</b></p>
+    <p>E Hënë - Diel: 8:00 - 20:00</p>
+    <p><b>Bibloteka Kombetare "Pjeter Bogdani":</b></p>
+    <p>E Hënë - Premte : 7:00 - 20:00</p>
+    <p>E Shtunë: 7:00 - 14:00</p>
+    <p><b>Bibloteka e Fakulteteve</b></p>
+    <p>E Hënë - Premte : 7:00 - 21:00</p>
+    <p>E Shtunë-E Diele: 8:00 - 18:00</p>
+    </div> 
+<div id="form1">
+<form name="forma1" onsubmit=" return validateForm()" >
+  <div class="EmriMbiemri">
+    <h3>Kyçuni: </h3>
+    <label><b>Emri &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  </b></label>
+    <input type="text" placeholder="Shkruani emrin" name="emri" required>
+	</br><br>
+    <label><b>Fjalekalimi</b></label>
+    <input type="password" placeholder="Shkruani fjalekalimin" name="fjalekalimi" >
+        <br>
+    <button type="submit">Kyçu</button>
+    <input type="checkbox" checked="checked"> Me ruaj
+  </div>
+  <br>
+    <span class="psw">Keni harruar <a href="#">fjalekalimin?</a></span>
+  </div>
+  <div id="form2" onsubmit="return validateEmail() " >
+		<h3> Kontaktoni në</h3>
+		<form action="mailto:someone@example.com" method="post" enctype="text/plain">
+		Emri dhe Mbiemri:<br>
+		<input type="text" name="name" ><br>
+		E-mail:<br>
+		<input type="text" name="mail"><br>
+		Comment:<br>
+		<textarea name="Description" rows="4" cols="30"> </textarea>
+		<input type="submit" value="Dërgo">
+		</form>
+	</div>
+  </div> 
+</form>
+    </div>
+</footer>
+<script> 
+function validateForm() {
+	var fjalkalimi1 = document.forms["forma1"]["fjalekalimi"].value; 
+		if (fjalkalimi1 == null || fjalkalimi1 == "") 
+		{ alert("Duhet te shtypni fjalekalimin tuaj!")
+		}
+}
+function ValidateEmail(mail)   
+{  
+ if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(form2.mail.value))  
+  {  
+    return (true)  
+  }  
+    alert("You have entered an invalid email address!")  
+    return (false)  
+}  
+</script> 
+</body> 
+</html> 

@@ -1,0 +1,382 @@
+<!DOCTYPE html> 
+<html> 
+<head manifest="demo_html.appcache">
+<head lang="en">
+<link rel="stylesheet" type="text/css" href="prapavija.css">
+<meta charset="utf-8">
+<style>
+#miresevini{
+    font-size:40px;
+    font-family: myFirstFont;
+    font-weight: bold;
+    color: brown;
+    text-shadow: -1px 0 #746F14,0 1px #746F14,1px 0 #746F14,0 -1px  #746F14; 
+}
+@font-face {
+   font-family: myFirstFont;
+   src: url(sansation_light.woff);
+}
+.box {
+	float: right;
+    right: 0;
+    bottom: 0;
+    border-image: url("htmlpro/border11.png") 30 repeat;
+    border: 1px solid black;
+    padding: 15px;
+    border-radius: 7px;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+#teksti{
+    float: left;
+    font-family: Verdana;
+}
+
+#submit1 {
+    width: 100%;
+    background-color: #5F4C0B;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#submit1:hover {
+    background-color: #886A08;
+}
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Permbajtja e sllajdit */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* butonet prapa-para */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Poziciono butonin "para' ne te djathte */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Kur butonet jane ne poziten'hover', shtoje nje prapavije si te zeze*/
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Teksti pershkrues i sllajdit */
+.text {
+  color: #0A0A0B  ;
+  font-size: 30px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Numrat qe tregojne cili sllaj eshte me radhe (1/3, 2/3, 3/3) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Pikat ne fund te sllajdit */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Kapercimi i sllajit/cngjyrosja*/
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* ne hapesira te vogla, zvogeloje tekstin */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+</style>
+<script>
+
+function ValidateEmail(mail)   
+{  
+ if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(form2.mail.value))  
+  {  
+    return (true)  
+  }  
+    alert("You have entered an invalid email address!")  
+    return (false)  
+}  
+function validateEmri (){
+    var emriRegjistrimit = document.forms["formaregjistrimit"]["emri"].value;
+	if (emriRegjistrimit==null || emriRegjistrimit=="")
+	{ alert ("Ju duhet te shenoni emrin dhe mbiemrin tuaj!")
+	}}
+	
+function validateMbiemrin(){
+var mbiemriRegjistrimit = document.forms["formaregjistrimit"]["mbiemri"].value;
+if (mbiemriRegjistrimit==null || mbiemriRegjistrimit=="")
+	{ alert ("Ju duhet te shenoni emrin dhe mbiemrin tuaj!")
+	}}
+function validatecheckbox(){
+	var school = get.ElementById("School").checked;
+	var College = get.ElementById("College").checked;
+	var University = get.ElementById("University").checked;
+	var MP = get.ElementById("MP").checked;
+	var AS = get.ElementById("AS").checked;
+	
+		if (school==false && College==false && University==false && MP==false && AS==false){
+			alert ("Ju lutem tregoni nivelin tuaj te studimeve!")
+		}
+		}
+
+</script>
+<title>Biblioteka</title>
+</head>
+<body> 
+<header>
+<div class="container">
+<img id="foto1" src="htmlpro/upp.jpg" alt="  " width="100%">
+</div>
+<br>
+<div id="Menu">
+
+<ul class="ballina">
+
+<li><a href="Bibliotekadixhitale.html" id="ballina" >Ballina</a></li>
+
+<li><a href="lajme.html" target="_blank">Lajme</a></li>
+
+<li style="width:15%;"><a href="http://fjalori.shkenca.org/">Fjalor Shqip-Shqip</a></li>
+
+<li><a href="blejliber.html">Blej Liber</a></li>
+
+<li><a href="lexoliber.html">Lexo Liber</a></li>
+
+<li><a href="argetim.html">Argetim</a></li>
+
+<li><a href="rrethnesh.html">Rreth Nesh</a></li>
+
+</ul>
+</div> 
+</header>
+<div style="border: 1px solid transparent;">
+<div id="body">
+
+<br>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="htmlpro/slide1.jpg" style="width:100%">
+  <div class="text">Biblioteka Hivzi Sylejmani</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="htmlpro/slide2.jpg" style="width:100%">
+  <div class="text">Biblioteka Kombetare</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="htmlpro/slide3.jpg" style="width:100%">
+  <div class="text">Biblioteka Elena Gjika</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+function validateForm() {
+	var fjalkalimi1 = document.forms["forma1"]["fjalekalimi"].value; 
+		if (fjalkalimi1 == null || fjalkalimi1 == "") 
+		{ alert("Duhet te shtypni fjalekalimin tuaj!")
+		return false
+		}
+}
+var now = new Date();
+var hours = now.getHours();
+
+document.write('It\'s now: ', hours, '<br><br>');
+document.bgColor="#CC9900";
+
+//18-19 night
+if (hours < 8){
+document.write ('<body style="background-color: #ffe6ff">');
+}
+else if (hours>8){
+document.write ('<body style="background-color: #fff2e6">');
+}
+else {
+document.write ('<body style="background-color: white">');
+}
+</script>
+<div id="teksti" >
+<h1 id="miresevini">Miresevini ne Biblioteken Dixhitale</h1>
+    <div style="text-align: justify-all; width: 700px; word-wrap: nowrap;">
+    <p style="line-height: 120%; font-size:18px;">&nbsp&nbspBiblioteka nga greqishtja e lashtë kthinë për ruajtje, kthinë e librave nën pronë private apo publike, në të cilën rregullisht bëhet ruajtja dhe mbledhja e librave. Për bibliotekë po ashtu merret edhe ndërtesa me këso kthina të librave.<br>Zakonisht, bibliotekat publike gjenden nën qeverisjen shtetërore, lokale apo gjendet nën mbikëqyrjen e organeve të dala sipas ligjeve të caktuara. <br>&nbspBibliotekave në të cilat ruhen libra nga lëmi apo fusha të posaçme zakonisht emërtohen sipas tyre. Janë të parapara për zhvillimin mendor, për qëllime kërkimore dhe studimore si dhe për mbajtjen e librave për të ardhmen (arkivimi i librave). Në anën tjetër bibliotekat publike janë të hapura për edukim të përgjithshëm (libra shkollor). Bibliotekat e përgjithshme apo universale (kombëtare, shtetërore, dhe B. universitare) zakonisht zgjedhin fusha të posaçme studimi, specializimi apo profesionalizimi (nëpërmjet instituteve, punishteve, zyrave).<br>
+&nbspBibliotekat më të vjetra të njohura gjatë kohës së lashtë duket të kenë qenë të zhvilluar tek babilonët. Për shkencëtarët janë të njohura përmbajtjet e ruajtura në tablo lloçi babilone gjegjësisht të mbretit të asyrve Asubranipal (vdiq 626 p.e.sonë) në Ninive. Biblioteka të rëndësishme të grekëve të lashtë duket të kenë qenë biblioteka e Aleksanduras dhe biblioteka e Pergamonaras. Ndërsa tek romakët, në vitin 39 p.e.sonë, Asinius Pollio hapi bibliotekën e parë publike në Romë. Zakonisht njohurit për bibliotekat e kohës së lashtë janë ngushtë të lidhura me njohurit mbi tempujt.</p>
+    </div>
+</div>
+<div class="box">
+			<legend><h3>Regjistrimi ne biblioteke</h3> </legend>
+			<form name="formaregjistrimit" onsubmit="validateEmri(); validateMbiemrin; validatecheckbox();">
+                       <label for="emri">Emri: </label><br>
+                       <input type="text" id="emri" name="emri" placeholder="Emri juaj.."><br>
+                       <label for="mbiemri">Mbiemri</label><br>
+                       <input type="text" id="mbiemri" name="mbiemri" placeholder="Mbiemri juaj.."><br>
+                       <label for="vendbanimi">Vendbanimi</label><br>
+                        
+						<select id="vendbanimi" name="vendbanimi"><br>
+                          <option value="prishtina">Prishtina</option>
+                          <option value="mitrovica">Mitrovica</option>
+                          <option value="vushtrri">Vushtrri</option>
+                         </select>
+						 </br>
+                    Niveli i studimeve: </br>
+                        <input id="School" type="checkbox" name="type" value="School"/>Shkolle e mesme</br>
+                        <input id="College" type="checkbox" name="type" value="College"/>Kolegj</br>
+                        <input id="University" type="checkbox" name="type" value="University"/>Universitet</br>
+                        <input id="MP" type="checkbox" name="type" value="MP"/>Me marredhenie pune</br>
+                        <input id="AS" type="checkbox" name="type" value="AS"/>Asnjera  </br></br>
+
+
+                        Data e anetaresimit: <input type="date" name="date"/><br>
+
+                    <input id="submit1" type="submit" value="Anetaresohu" class="rounded"> <input type="reset" value="Pastro" class="rounded">   
+            </form>
+</div>
+</div>
+<footer style="clear:both;">  
+  <div id="footer">
+<div id="orari">
+    <h3> Orari i punes ne biblotekat e Prishtines:</h3>
+	<p><b>Biblioteka "Hivzi Sylejmani":</b></p>
+    <p>E Hënë - Diel: 8:00 - 20:00</p>
+    <p><b>Bibloteka Kombetare "Pjeter Bogdani":</b></p>
+    <p>E Hënë - Premte : 7:00 - 20:00</p>
+    <p>E Shtunë: 7:00 - 14:00</p>
+    <p><b>Bibloteka e Fakulteteve</b></p>
+    <p>E Hënë - Premte : 7:00 - 21:00</p>
+    <p>E Shtunë-E Diele: 8:00 - 18:00</p>
+</div> 
+<div id="form1">
+<form name="forma1" onsubmit=" return validateForm()" >
+  <div class="EmriMbiemri">
+    <h3>Kyçuni: </h3>
+    <label><b>Emri &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  </b></label>
+    <input type="text" placeholder="Shkruani emrin" name="emri" required>
+	</br><br>
+    <label><b>Fjalekalimi</b></label>
+    <input type="password" placeholder="Shkruani fjalekalimin" name="fjalekalimi" >
+        <br>
+    <button type="submit">Kyçu</button>
+    <input type="checkbox" checked="checked"> Me ruaj
+  </div>
+  <br>
+    <span class="psw">Keni harruar <a href="#">fjalekalimin?</a></span>
+  </div>
+ </form>
+ <form>
+  <div id="form2" onsubmit="return validateEmail() " >
+		<h3> Kontaktoni në</h3>
+		<form action="mailto:someone@example.com" method="post" enctype="text/plain">
+		Emri dhe Mbiemri:<br>
+		<input type="text" name="name" ><br>
+		E-mail:<br>
+		<input type="text" name="mail"><br>
+		Comment:<br>
+		<textarea name="Description" rows="4" cols="30"> </textarea>
+		<input type="submit" value="Dërgo">
+		</form>
+	</div>
+  </div> 
+</form>
+    </div>
+</footer>
+</body> 
+</html>

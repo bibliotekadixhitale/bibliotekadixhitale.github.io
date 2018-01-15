@@ -1,0 +1,257 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<link rel="stylesheet" type="text/css" href="prapavija.css">
+<title> Lexo Liber </title> 
+<style> 
+#libra {
+    margin-top: 10px;
+    padding-left:30px;
+    }
+.carousel {
+  padding: 20px;
+  -webkit-perspective: 500px;
+          perspective: 500px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.carousel > * {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+.carousel figure {
+  margin: 0;
+  width: 400px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transform-origin: 50% 50% -482.8427124746px;
+          transform-origin: 50% 50% -482.8427124746px;
+}
+.carousel figure img {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 40px;
+  opacity: 0.9;
+}
+.carousel figure img:not(:first-of-type) {
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-transform-origin: 50% 50% -482.8427124746px;
+          transform-origin: 50% 50% -482.8427124746px;
+}
+.carousel figure img:nth-child(2) {
+  -webkit-transform: rotateY(0.7853981634rad);
+          transform: rotateY(0.7853981634rad);
+}
+.carousel figure img:nth-child(3) {
+  -webkit-transform: rotateY(1.5707963268rad);
+          transform: rotateY(1.5707963268rad);
+}
+.carousel figure img:nth-child(4) {
+  -webkit-transform: rotateY(2.3561944902rad);
+          transform: rotateY(2.3561944902rad);
+}
+.carousel figure img:nth-child(5) {
+  -webkit-transform: rotateY(3.1415926536rad);
+          transform: rotateY(3.1415926536rad);
+}
+.carousel figure img:nth-child(6) {
+  -webkit-transform: rotateY(3.926990817rad);
+          transform: rotateY(3.926990817rad);
+}
+.carousel figure img:nth-child(7) {
+  -webkit-transform: rotateY(4.7123889804rad);
+          transform: rotateY(4.7123889804rad);
+}
+.carousel figure img:nth-child(8) {
+  -webkit-transform: rotateY(5.4977871438rad);
+          transform: rotateY(5.4977871438rad);
+}
+.carousel nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 20px 0 0;
+}
+.carousel nav button {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  margin: 0 5px;
+  cursor: pointer;
+  color: #333;
+  background: none;
+  border: 1px solid;
+  letter-spacing: 1px;
+  padding: 5px 10px;
+}
+
+
+</style> 
+</head> 
+<body> 
+<header>
+<div class="container">
+<img id="foto1" src="htmlpro/upp.jpg" alt="  " width="100%">
+</div>
+<br>
+<div id="Menu">
+
+<ul class="ballina">
+
+<li><a href="Bibliotekadixhitale.html" id="ballina" >Ballina</a></li>
+
+<li><a href="lajme.html" target="_blank">Lajme</a></li>
+
+<li style="width:15%;"><a href="http://fjalori.shkenca.org/">Fjalor Shqip-Shqip</a></li>
+
+<li><a href="blejliber.html">Blej Liber</a></li>
+
+<li><a href="lexoliber.html">Lexo Liber</a></li>
+
+<li><a href="argetim.html">Argetim</a></li>
+
+<li><a href="rrethnesh.html">Rreth Nesh</a></li>
+
+</ul>
+</div> 
+</header>
+<div class="carousel">
+  <figure>
+    <img src="htmlpro/t1.jpg" alt="thenia e pare" id="1">
+    <img src="htmlpro/t2.jpg" alt="thenia e dyte">
+    <img src="htmlpro/t3.jpg" alt="thenia e trete">
+    <img src="htmlpro/t4.jpg" alt="thenia e katert">
+    <img src="htmlpro/t5.jpg" alt="thenia e peste">
+    <img src="htmlpro/t6.jpg" alt="thenia e gjashte">
+  </figure>
+  <nav>
+	
+		<button id="next">Next</button>
+	</nav>
+</div>
+<p>
+
+<script>
+
+var array = ["htmlpro/t1.jpg","htmlpro/t2.jpg","htmlpro/t3.jpg","htmlpro/t4.jpg","htmlpro/t5.jpg","htmlpro/t6.jpg"];
+var i = 0;
+
+window.onload = function(){
+    var button = document.getElementById("next");
+    next.onclick = function1;
+   
+    }
+
+function function1(){
+  var photo =  document.getElementById("1");
+  var array = ["htmlpro/t1.jpg","htmlpro/t2.jpg","htmlpro/t3.jpg","htmlpro/t4.jpg","htmlpro/t5.jpg","htmlpro/t6.jpg","htmlpro/t1.jpg"];
+  
+  photo.src = array[i];
+  i++;
+  if (i > 6) { i = 0; }
+   }
+   
+</script>
+<!--lista e librave-->
+<div id="libra">
+<img src="htmlpro/hamlet.jpg" width="220" height="277" alt="Hamleti">
+<cite><span style="color:red; font-weight:bold;">
+<a style="text-decoration:none" href="http://www.folgerdigitaltexts.org/download/pdf/Ham.pdf">Hamleti</a>
+</span></cite> nga Shekspiri. 
+
+<img src="htmlpro/images.jpg" width="220" height="277" alt="Oliver">
+<cite>
+<span style="color:lightseagreen; font-weight:bold;">
+<a style="text-decoration:none" href="https://www.planetebook.com/ebooks/Oliver-Twist.pdf">Oliver Twist</a>
+</span>
+</cite> nga Charles Dickens. 
+
+<img src="htmlpro/harrypotter.jpg" width="220" height="277" alt="harrypotter">
+<cite><span style="color:orange; font-weight:bold;"><a style="text-decoration:none" href="http://www2.sdfi.edu.cn/netclass/jiaoan/englit/download/Harry%20Potter%20and%20the%20Sorcerer's%20Stone.pdf">Harry Potter</a></span></cite> nga J.K.Rowling. 
+</div>
+
+</br> </br> </br> </br> </br> 
+<footer>
+    <div id="footer">
+    <div id="orari">
+    <h3> Orari i punes ne biblotekat e Prishtines:</h3>
+	<p><b>Biblioteka "Hivzi Sylejmani":</b></p>
+    <p>E Hënë - Diel: 8:00 - 20:00</p>
+    <p><b>Bibloteka Kombetare "Pjeter Bogdani":</b></p>
+    <p>E Hënë - Premte : 7:00 - 20:00</p>
+    <p>E Shtunë: 7:00 - 14:00</p>
+    <p><b>Bibloteka e Fakulteteve</b></p>
+    <p>E Hënë - Premte : 7:00 - 21:00</p>
+    <p>E Shtunë-E Diele: 8:00 - 18:00</p>
+    </div> 
+<div id="form1">
+<form name="forma1" onsubmit=" return validateForm()" >
+  <div class="EmriMbiemri">
+    <h3>Kyçuni: </h3>
+    <label><b>Emri &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  </b></label>
+    <input type="text" placeholder="Shkruani emrin" name="emri" required>
+	</br><br>
+    <label><b>Fjalekalimi</b></label>
+    <input type="password" placeholder="Shkruani fjalekalimin" name="fjalekalimi" >
+        <br>
+    <button type="submit">Kyçu</button>
+    <input type="checkbox" checked="checked"> Me ruaj
+  </div>
+  <br>
+    <span class="psw">Keni harruar <a href="#">fjalekalimin?</a></span>
+  </div>
+  <div id="form2" onsubmit="return validateEmail() " >
+		<h3> Kontaktoni në</h3>
+		<form action="mailto:someone@example.com" method="post" enctype="text/plain">
+		Emri dhe Mbiemri:<br>
+		<input type="text" name="name" ><br>
+		E-mail:<br>
+		<input type="text" name="mail"><br>
+		Comment:<br>
+		<textarea name="Description" rows="4" cols="30"> </textarea>
+		<input type="submit" value="Dërgo">
+		</form>
+	</div>
+  </div> 
+</form>
+    </div>
+</footer>
+<script> 
+function validateForm() {
+	var fjalkalimi1 = document.forms["forma1"]["fjalekalimi"].value; 
+		if (fjalkalimi1 == null || fjalkalimi1 == "") 
+		{ alert("Duhet te shtypni fjalekalimin tuaj!")
+		}
+}
+function ValidateEmail(mail)   
+{  
+ if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(form2.mail.value))  
+  {  
+    return (true)  
+  }  
+    alert("You have entered an invalid email address!")  
+    return (false)  
+}  
+</script> 
+</body> 
+</html> 

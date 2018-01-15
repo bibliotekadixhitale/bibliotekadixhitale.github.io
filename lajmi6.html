@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html>
+
+<head lang="en">
+
+<link rel="stylesheet" type="text/css" href="prapavija.css">
+<style>
+
+	.lajmi1 
+	{
+	margin: auto;
+    width: 60%;
+    padding: 10px;
+	}
+
+</style> 
+</head> 
+<body>
+
+<header>
+
+		<div class="container">
+			<img id="foto1" src="htmlpro\upp.jpg" alt="  " width="100%">
+			<div class="bottom-left"><h1 style="color:#E8E1DF  ">BIBLIOTEKA DIXHITALE</h1></div>
+		</div>
+
+<nav>
+
+<ul class="ballina">
+
+<li><a href="Bibliotekadixhitale.html" id="ballina" >Ballina</a></li>
+
+<li><a href="lajme.html" target="_blank">Lajme</a></li>
+
+<li style="width:15%;"><a href="http://fjalori.shkenca.org/">Fjalor Shqip-Shqip</a></li>
+
+<li><a href="blejliber.html">Blej Liber</a></li>
+
+<li><a href="lexoliber.html">Lexo Liber</a></li>
+
+<li><a href="argetim.html">Argetim</a></li>
+
+<li><a href="rrethnesh.html">Rreth Nesh</a></li>
+
+</ul>
+</nav>
+</header>
+    
+<h1 style="text-align:center; font-family:arial;" > Shtëpia muze e Kadaresë, më e vizituara nga Monumentet e Trashëgimisë Kulturore </h1>
+	<div class="lajmi1">
+	<p style="text-align:justify; margin-left:100px; margin-right:100px; font-size:16px; font-family:Times New Roman;"> 
+		<img style="position:relative" src="htmlpro\lajmi6.jpg" alt="Shtëpia muze e Kadaresë, më e vizituara nga Monumentet e Trashëgimisë Kulturore"> 
+	<br><br><br>
+	<b>24 dhjetor 2017 21:52
+Shtëpia e shkrimtarit të shquar shqiptar Ismail Kadare në qytetin e tij të lindjes në Gjirokastër ishte këtë vit më e vizituara nga Monumentet e Trashëgimisë Kulturore.</b>
+		<br><br>
+		Shtëpia e Kadaresë, është kthyer në një qendër të rëndësishme letrare e kulturore, jo vetëm në Shqipëri por në të gjitha trojet shqiptare.
+		<br><br>	
+	</p>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/NqUw0ncCEZY" allowfullscreen ></iframe>
+	</div>
+<div style="width:800px; margin:0 auto;">
+    <p>Interviste per 80 vjetorin e Ismail Kadarese</p>
+ <audio controls autoplay muted>
+    <source src="htmlpro/80.mp3" type="audio/mp3">
+        Shfletuesi juaj nuk perkrah video elementin.
+</audio>
+</div>
+<footer>
+    <div id="footer">
+    <div id="orari">
+    <h3> Orari i punes ne biblotekat e Prishtines:</h3>
+	<p><b>Biblioteka "Hivzi Sylejmani":</b></p>
+    <p>E Hënë - Diel: 8:00 - 20:00</p>
+    <p><b>Bibloteka Kombetare "Pjeter Bogdani":</b></p>
+    <p>E Hënë - Premte : 7:00 - 20:00</p>
+    <p>E Shtunë: 7:00 - 14:00</p>
+    <p><b>Bibloteka e Fakulteteve</b></p>
+    <p>E Hënë - Premte : 7:00 - 21:00</p>
+    <p>E Shtunë-E Diele: 8:00 - 18:00</p>
+    </div> 
+<div id="form1">
+<form name="forma1" onsubmit=" return validateForm()" >
+  <div class="EmriMbiemri">
+    <h3>Kyçuni: </h3>
+    <label><b>Emri &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  </b></label>
+    <input type="text" placeholder="Shkruani emrin" name="emri" required>
+	</br><br>
+    <label><b>Fjalekalimi</b></label>
+    <input type="password" placeholder="Shkruani fjalekalimin" name="fjalekalimi" >
+        <br>
+    <button type="submit">Kyçu</button>
+    <input type="checkbox" checked="checked"> Me ruaj
+  </div>
+  <br>
+    <span class="psw">Keni harruar <a href="#">fjalekalimin?</a></span>
+  </div>
+  <div id="form2" onsubmit="return validateEmail() " >
+		<h3> Kontaktoni në</h3>
+		<form action="mailto:someone@example.com" method="post" enctype="text/plain">
+		Emri dhe Mbiemri:<br>
+		<input type="text" name="name" ><br>
+		E-mail:<br>
+		<input type="text" name="mail"><br>
+		Comment:<br>
+		<textarea name="Description" rows="4" cols="30"> </textarea>
+		<input type="submit" value="Dërgo">
+		</form>
+	</div>
+  </div> 
+</form>
+    </div>
+</footer>
+<script> 
+function validateForm() {
+	var fjalkalimi1 = document.forms["forma1"]["fjalekalimi"].value; 
+		if (fjalkalimi1 == null || fjalkalimi1 == "") 
+		{ alert("Duhet te shtypni fjalekalimin tuaj!")
+		}
+}
+function ValidateEmail(mail)   
+{  
+ if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(form2.mail.value))  
+  {  
+    return (true)  
+  }  
+    alert("You have entered an invalid email address!")  
+    return (false)  
+}  
+</script> 
+</body> 
+</html> 
